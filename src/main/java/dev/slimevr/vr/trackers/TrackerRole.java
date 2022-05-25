@@ -1,7 +1,10 @@
 package dev.slimevr.vr.trackers;
 
+/** The SteamVR Tracker role */
 public enum TrackerRole {
 
+	// TODO: We seem to be missing several important roles, like hip.
+	// @formatter:off
 	NONE(0, "", "", null),
 	WAIST(1, "vive_tracker_waist", "TrackerRole_Waist", DeviceType.TRACKER),
 	LEFT_FOOT(2, "vive_tracker_left_foot", "TrackerRole_LeftFoot", DeviceType.TRACKER),
@@ -12,12 +15,7 @@ public enum TrackerRole {
 	LEFT_ELBOW(7, "vive_tracker_left_elbow", "TrackerRole_LeftElbow", DeviceType.TRACKER),
 	RIGHT_ELBOW(8, "vive_tracker_right_elbow", "TrackerRole_RightElbow", DeviceType.TRACKER),
 	LEFT_SHOULDER(9, "vive_tracker_left_shoulder", "TrackerRole_LeftShoulder", DeviceType.TRACKER),
-	RIGHT_SHOULDER(
-		10,
-		"vive_tracker_right_shoulder",
-		"TrackerRole_RightShoulder",
-		DeviceType.TRACKER
-	),
+	RIGHT_SHOULDER(10,"vive_tracker_right_shoulder","TrackerRole_RightShoulder", DeviceType.TRACKER),
 	LEFT_HAND(11, "vive_tracker_handed", "TrackerRole_Handed", DeviceType.TRACKER),
 	RIGHT_HAND(12, "vive_tracker_handed", "TrackerRole_Handed", DeviceType.TRACKER),
 	LEFT_CONTROLLER(13, "vive_tracker_handed", "TrackerRole_Handed", DeviceType.CONTROLLER),
@@ -29,6 +27,7 @@ public enum TrackerRole {
 	HMD(19, "", "", DeviceType.HMD),
 	BEACON(20, "", "", DeviceType.TRACKING_REFERENCE),
 	GENERIC_CONTROLLER(21, "vive_tracker_handed", "TrackerRole_Handed", DeviceType.CONTROLLER);
+	// @formatter:on
 
 	public static final TrackerRole[] values = values();
 	private static final TrackerRole[] byId = new TrackerRole[22];
